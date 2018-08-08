@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="ChromeTest(failed)" parallel="tests">
+    <parameter name="MyBrowser" value="chrome"/>
+    <classes>
+      <class name="scripts.Login">
+        <methods>
+          <include name="loginCheck"/>
+          <include name="launchBrowser"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- scripts.Login -->
+      <class name="scripts.LoginAndClickTask">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="loginClick"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- scripts.LoginAndClickTask -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="MyBrowser" value="firefox"/>
+    <classes>
+      <class name="scripts.Login">
+        <methods>
+          <include name="loginCheck"/>
+          <include name="launchBrowser"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- scripts.Login -->
+      <class name="scripts.LoginAndClickTask">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="loginClick"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- scripts.LoginAndClickTask -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
